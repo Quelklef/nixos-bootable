@@ -6,7 +6,7 @@ dev="${1:?Missing device name as argument (eg /dev/sda)}"
 [ -w "$dev" ] || { echo "Cannot write to $dev. Try running as root?"; exit 1; }
 
 echo "Building"
-bash ./build.sh
+./build.sh
 
 echo "Flashing $dev"
 dd \
